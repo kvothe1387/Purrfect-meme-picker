@@ -18,13 +18,14 @@ function highlightCheckedOption(e) {
 }
 
 function getMatchingCatsArray() {
-  const isGif = gifsOnlyOption.checked
-  console.log(isGif)
-
 
   if (document.querySelector('input[type="radio"]:checked')) {
     const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-    console.log(selectedEmotion)
+    const isGif = gifsOnlyOption.checked
+
+    const matchingCatsArray = catsData.filter(function (cat) {
+      return cat.emotionTags.includes(selectedEmotion)
+    })
 
   }
 }
@@ -61,6 +62,15 @@ function renderEmotionsRadios(cats) {
 }
 
 renderEmotionsRadios(catsData)
+
+
+
+
+
+
+const newYorkSeries = series.filter(function (show) {
+  return show.location === 'New York'
+})
 
 
 
