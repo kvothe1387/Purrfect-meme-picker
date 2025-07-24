@@ -30,7 +30,7 @@ function renderCat() {
   memeModalInner.innerHTML = `
     <img
       class="cat-img"
-      src="./imgaes/${catObject.image}"
+      src="./images/${catObject.image}"
       alt="${catObject.alt}"
     >`
   memeModal.style.display = "flex"
